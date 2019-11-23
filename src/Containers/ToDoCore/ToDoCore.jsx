@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import styles from "./ToDoCore.module.scss";
 import ListItem from "../../Components/ListItem";
 import { firestore } from "../../firebase";
+import Button from "../../Components/Button";
 
 class ToDoCore extends Component {
   state = {
     list: [],
+    filteredList: [],
     textInput: ""
   };
 
@@ -18,7 +20,8 @@ class ToDoCore extends Component {
           return { ...doc.data(), docId: doc.id };
         });
         this.setState({
-          list: list
+          list: list,
+          filteredList: list
         });
       });
   };
@@ -46,8 +49,29 @@ class ToDoCore extends Component {
       .then(this.renderListItems);
   };
 
+  markAsDone = docId => {
+    firestore
+      .collection("listItems")
+      .doc(docId)
+      .update({ isMarked: true })
+      .then(this.renderListItems);
+  };
+
   getTextValue = event => {
     this.setState({ textInput: event.target.value });
+  };
+
+  handleClick = event => {
+    const filteredList = this.state.list.filter(item => {
+      if (event.target.innerHTML === "Done") {
+        return item.isMarked === true;
+      } else if (event.target.innerHTML === "ToDo") {
+        return item.isMarked === false;
+      } else {
+        return event.target.innerHTML === "Full list";
+      }
+    });
+    this.setState({ filteredList: filteredList });
   };
 
   render() {
@@ -59,13 +83,18 @@ class ToDoCore extends Component {
           onChange={this.getTextValue}
           value={this.state.textInput}
         ></input>
+        <Button name={"Done"} onClick={this.handleClick}></Button>
+        <Button name={"ToDo"} onClick={this.handleClick}></Button>
+        <Button name={"Full list"} onClick={this.handleClick}></Button>
         <ul>
-          {this.state.list.map(item => (
+          {this.state.filteredList.map(item => (
             <ListItem
-              text={item.text}
+              markAsDone={this.markAsDone}
               deleteItem={this.deleteItem}
+              text={item.text}
               key={item.docId}
               data={item}
+              isMarked={item.isMarked}
             ></ListItem>
           ))}
         </ul>

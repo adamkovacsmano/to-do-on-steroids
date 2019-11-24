@@ -79,6 +79,7 @@ class ToDoCore extends Component {
       <div className={styles.container}>
         <input
           type="text"
+          placeholder="..add items"
           onKeyPress={this.addListItem}
           onChange={this.getTextValue}
           value={this.state.textInput}

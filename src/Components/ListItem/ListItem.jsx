@@ -5,17 +5,20 @@ class ListItem extends Component {
   render() {
     const markedStyle = this.props.isMarked ? styles.marked : "";
     return (
-      <>
+      <div className={styles.listContainer}>
         <li
           className={markedStyle}
           onClick={() => this.props.markAsDone(this.props.data.docId)}
         >
           {this.props.text}
         </li>
-        <button onClick={() => this.props.deleteItem(this.props.data.docId)}>
+        <button
+          className={styles.delete}
+          onClick={() => this.props.deleteItem(this.props.data.docId)}
+        >
           X
         </button>
-      </>
+      </div>
     );
   }
 }

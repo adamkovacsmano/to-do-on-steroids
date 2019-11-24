@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import styles from "./Header.module.scss";
 
 class Header extends Component {
-  state = {};
   render() {
-    return <h1>WHAT to DO??? when Life SLAPS you with a FISH?</h1>;
+    return (
+      <h1>
+        <span>WHAT</span> to <span>DO???</span> when Life <span>SLAPS</span> you
+        with a <span>FISH</span>?
+      </h1>
+    );
   }
 }
 

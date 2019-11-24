@@ -8,7 +8,9 @@ class ToDoCore extends Component {
   state = {
     list: [],
     filteredList: [],
-    textInput: ""
+    textInput: "",
+    userName: this.props.userName,
+    userImage: this.props.userImage
   };
 
   renderListItems = () => {
@@ -32,7 +34,12 @@ class ToDoCore extends Component {
 
   addListItem = event => {
     if (event.keyCode === 13) {
-      let data = { text: this.state.textInput, isMarked: false };
+      let data = {
+        text: this.state.textInput,
+        isMarked: false,
+        userName: this.state.userName,
+        userImage: this.state.userImage
+      };
       firestore
         .collection("listItems")
         .add(data)
@@ -61,6 +68,16 @@ class ToDoCore extends Component {
     this.setState({ textInput: event.target.value });
   };
 
+  handleChange = event => {
+    let items = this.state.list;
+    items = items.filter(item => {
+      return (
+        item.text.toLowerCase().search(event.target.value.toLowerCase()) !== -1
+      );
+    });
+    this.setState({ items: items, filteredList: items });
+  };
+
   handleClick = event => {
     const filteredList = this.state.list.filter(item => {
       if (event.target.innerHTML === "Done") {
@@ -79,14 +96,22 @@ class ToDoCore extends Component {
       <div className={styles.container}>
         <input
           type="text"
-          placeholder="..add items"
+          placeholder="..add your stuff"
           onKeyPress={this.addListItem}
           onChange={this.getTextValue}
           value={this.state.textInput}
         ></input>
-        <Button name={"Done"} onClick={this.handleClick}></Button>
-        <Button name={"ToDo"} onClick={this.handleClick}></Button>
-        <Button name={"Full list"} onClick={this.handleClick}></Button>
+        <input
+          type="text"
+          placeholder="..search"
+          onChange={this.handleChange}
+        ></input>
+        <div className={styles.buttonContainer}>
+          <Button name={"Done"} onClick={this.handleClick}></Button>
+          <Button name={"ToDo"} onClick={this.handleClick}></Button>
+          <Button name={"Full list"} onClick={this.handleClick}></Button>
+        </div>
+        <p>click on items to mark them as done</p>
         <ul>
           {this.state.filteredList.map(item => (
             <ListItem
@@ -96,6 +121,8 @@ class ToDoCore extends Component {
               key={item.docId}
               data={item}
               isMarked={item.isMarked}
+              userName={item.userName}
+              userImage={item.userImage}
             ></ListItem>
           ))}
         </ul>

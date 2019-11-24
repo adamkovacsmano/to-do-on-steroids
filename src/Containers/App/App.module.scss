@@ -1,1 +1,50 @@
+.appContainer {
+  background-color: rgb(235, 219, 131);
+  height: 100vh;
+  text-align: center;
 
+  h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3em;
+  }
+
+  h2 {
+    color: rgb(44, 84, 148);
+    font-size: 1.5em;
+    margin: 0px;
+  }
+
+  .login {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .appContainer {
+    h1 {
+      font-size: 2em;
+      top: 25%;
+    }
+    h2 {
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .appContainer {
+    h1 {
+      font-size: 1.5em;
+      top: 20%;
+    }
+    h2 {
+      font-size: 1em;
+    }
+  }
+}

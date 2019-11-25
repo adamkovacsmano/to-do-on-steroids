@@ -22,12 +22,6 @@ class ListItem extends Component {
             height="20px"
           ></img>
         </span>
-        {/* <img
-          src={this.props.userImage}
-          alt="user img"
-          width="20px"
-          height="20px"
-        ></img> */}
         <button
           className={styles.delete}
           onClick={() => this.props.deleteItem(this.props.data.docId)}

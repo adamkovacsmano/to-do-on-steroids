@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToDoCore should render correctly in "debug" mode 1`] = `
+<div
+  className="container"
+>
+  <input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="..add your stuff"
+    type="text"
+    value=""
+  />
+  <input
+    onChange={[Function]}
+    placeholder="..search"
+    type="text"
+  />
+  <div
+    className="buttonContainer"
+  >
+    <Button
+      name="Done"
+      onClick={[Function]}
+    />
+    <Button
+      name="ToDo"
+      onClick={[Function]}
+    />
+    <Button
+      name="Full list"
+      onClick={[Function]}
+    />
+  </div>
+  <p>
+    click on items to mark them as done
+  </p>
+  <ul />
+</div>
+`;

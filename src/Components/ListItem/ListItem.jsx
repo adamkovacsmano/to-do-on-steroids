@@ -7,6 +7,7 @@ class ListItem extends Component {
     return (
       <div className={styles.listContainer}>
         <li
+          type="text"
           className={markedStyle}
           onClick={() => this.props.markAsDone(this.props.data.docId)}
         >
@@ -23,10 +24,17 @@ class ListItem extends Component {
           ></img>
         </span>
         <button
+          id="testButton3"
           className={styles.delete}
           onClick={() => this.props.deleteItem(this.props.data.docId)}
         >
           X
+        </button>
+        <button
+          className={styles.edit}
+          onClick={() => this.props.updateItem(this.props.data.docId)}
+        >
+          edit
         </button>
       </div>
     );

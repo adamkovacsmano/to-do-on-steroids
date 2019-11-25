@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterIcon Tests should match the snapshot 1`] = `
+<div
+  className="listContainer"
+>
+  <li
+    className=""
+    onClick={[Function]}
+    type="text"
+  />
+  <span
+    className="userInfo"
+  >
+     
+    ...by 
+     
+    <img
+      alt="user img"
+      height="20px"
+      width="20px"
+    />
+  </span>
+  <button
+    className="delete"
+    id="testButton3"
+    onClick={[Function]}
+  >
+    X
+  </button>
+  <button
+    className="edit"
+    onClick={[Function]}
+  >
+    edit
+  </button>
+</div>
+`;
+
+exports[`ListItem Tests should match the snapshot 1`] = `
+<div
+  className="listContainer"
+>
+  <li
+    className=""
+    onClick={[Function]}
+    type="text"
+  />
+  <span
+    className="userInfo"
+  >
+     
+    ...by 
+     
+    <img
+      alt="user img"
+      height="20px"
+      width="20px"
+    />
+  </span>
+  <button
+    className="delete"
+    id="testButton3"
+    onClick={[Function]}
+  >
+    X
+  </button>
+  <button
+    className="edit"
+    onClick={[Function]}
+  >
+    edit
+  </button>
+</div>
+`;

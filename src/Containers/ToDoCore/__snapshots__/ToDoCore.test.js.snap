@@ -5,6 +5,7 @@ exports[`ToDoCore should render correctly in "debug" mode 1`] = `
   className="container"
 >
   <input
+    id="testInput"
     onChange={[Function]}
     onKeyPress={[Function]}
     placeholder="..add your stuff"
@@ -20,14 +21,17 @@ exports[`ToDoCore should render correctly in "debug" mode 1`] = `
     className="buttonContainer"
   >
     <Button
+      id="testButton"
       name="Done"
       onClick={[Function]}
     />
     <Button
+      id="testButton2"
       name="ToDo"
       onClick={[Function]}
     />
     <Button
+      id="testButton3"
       name="Full list"
       onClick={[Function]}
     />
@@ -37,4 +41,349 @@ exports[`ToDoCore should render correctly in "debug" mode 1`] = `
   </p>
   <ul />
 </div>
+`;
+
+exports[`should be possible to activate Button with onClick 1`] = `
+<ToDoCore>
+  <div
+    className="container"
+  >
+    <input
+      id="testInput"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="..add your stuff"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="..search"
+      type="text"
+    />
+    <div
+      className="buttonContainer"
+    >
+      <Button
+        id="testButton"
+        name="Done"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Done
+        </button>
+      </Button>
+      <Button
+        id="testButton2"
+        name="ToDo"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          ToDo
+        </button>
+      </Button>
+      <Button
+        id="testButton3"
+        name="Full list"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Full list
+        </button>
+      </Button>
+    </div>
+    <p>
+      click on items to mark them as done
+    </p>
+    <ul />
+  </div>
+</ToDoCore>
+`;
+
+exports[`should be possible to activate Button with onClick 2`] = `
+<ToDoCore>
+  <div
+    className="container"
+  >
+    <input
+      id="testInput"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="..add your stuff"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="..search"
+      type="text"
+    />
+    <div
+      className="buttonContainer"
+    >
+      <Button
+        id="testButton"
+        name="Done"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Done
+        </button>
+      </Button>
+      <Button
+        id="testButton2"
+        name="ToDo"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          ToDo
+        </button>
+      </Button>
+      <Button
+        id="testButton3"
+        name="Full list"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Full list
+        </button>
+      </Button>
+    </div>
+    <p>
+      click on items to mark them as done
+    </p>
+    <ul />
+  </div>
+</ToDoCore>
+`;
+
+exports[`should be possible to activate Button with onClick 3`] = `
+<ToDoCore>
+  <div
+    className="container"
+  >
+    <input
+      id="testInput"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="..add your stuff"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="..search"
+      type="text"
+    />
+    <div
+      className="buttonContainer"
+    >
+      <Button
+        id="testButton"
+        name="Done"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Done
+        </button>
+      </Button>
+      <Button
+        id="testButton2"
+        name="ToDo"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          ToDo
+        </button>
+      </Button>
+      <Button
+        id="testButton3"
+        name="Full list"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Full list
+        </button>
+      </Button>
+    </div>
+    <p>
+      click on items to mark them as done
+    </p>
+    <ul />
+  </div>
+</ToDoCore>
+`;
+
+exports[`should be possible to press Enter on textarea 1`] = `
+<ToDoCore>
+  <div
+    className="container"
+  >
+    <input
+      id="testInput"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="..add your stuff"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="..search"
+      type="text"
+    />
+    <div
+      className="buttonContainer"
+    >
+      <Button
+        id="testButton"
+        name="Done"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Done
+        </button>
+      </Button>
+      <Button
+        id="testButton2"
+        name="ToDo"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          ToDo
+        </button>
+      </Button>
+      <Button
+        id="testButton3"
+        name="Full list"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Full list
+        </button>
+      </Button>
+    </div>
+    <p>
+      click on items to mark them as done
+    </p>
+    <ul />
+  </div>
+</ToDoCore>
+`;
+
+exports[`should be possible to press Enter on textarea 2`] = `
+<ToDoCore>
+  <div
+    className="container"
+  >
+    <input
+      id="testInput"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="..add your stuff"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="..search"
+      type="text"
+    />
+    <div
+      className="buttonContainer"
+    >
+      <Button
+        id="testButton"
+        name="Done"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Done
+        </button>
+      </Button>
+      <Button
+        id="testButton2"
+        name="ToDo"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          ToDo
+        </button>
+      </Button>
+      <Button
+        id="testButton3"
+        name="Full list"
+        onClick={[Function]}
+      >
+        <button
+          className="primary"
+          id="testButton2"
+          onClick={[Function]}
+        >
+          Full list
+        </button>
+      </Button>
+    </div>
+    <p>
+      click on items to mark them as done
+    </p>
+    <ul />
+  </div>
+</ToDoCore>
 `;

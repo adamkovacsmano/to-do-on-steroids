@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Tests should match the snapshot 1`] = `
+<button
+  className="primary"
+  id="testButton2"
+/>
+`;
+
+exports[`FilterIcon Tests should match the snapshot 1`] = `
+<button
+  className="primary"
+  id="testButton2"
+/>
+`;
+
+exports[`should be possible to activate Button with onClick 1`] = `
+<Button>
+  <button
+    className="primary"
+    id="testButton2"
+  />
+</Button>
+`;

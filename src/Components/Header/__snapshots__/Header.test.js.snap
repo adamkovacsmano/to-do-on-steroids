@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterIcon Tests should match the snapshot 1`] = `
+<h1>
+  <span>
+    WHAT
+  </span>
+   to 
+  <span>
+    DO???
+  </span>
+   when Life 
+  <span>
+    SLAPS
+  </span>
+   you with a 
+  <span>
+    FISH
+  </span>
+  ?
+</h1>
+`;

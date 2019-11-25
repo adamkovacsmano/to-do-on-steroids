@@ -4,7 +4,11 @@ import styles from "./Button.module.scss";
 class Button extends Component {
   render() {
     return (
-      <button className={styles.primary} onClick={this.props.onClick}>
+      <button
+        id="testButton2"
+        className={styles.primary}
+        onClick={this.props.onClick}
+      >
         {this.props.name}
       </button>
     );

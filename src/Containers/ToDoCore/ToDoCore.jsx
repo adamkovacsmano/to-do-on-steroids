@@ -64,6 +64,14 @@ class ToDoCore extends Component {
       .then(this.renderListItems);
   };
 
+  updateItem = docId => {
+    firestore
+      .collection("listItems")
+      .doc(docId)
+      .update({ textInput: "" })
+      .then(this.renderListItems);
+  };
+
   getTextValue = event => {
     this.setState({ textInput: event.target.value });
   };
@@ -95,6 +103,7 @@ class ToDoCore extends Component {
     return (
       <div className={styles.container}>
         <input
+          id="testInput"
           type="text"
           placeholder="..add your stuff"
           onKeyPress={this.addListItem}
@@ -107,9 +116,21 @@ class ToDoCore extends Component {
           onChange={this.handleChange}
         ></input>
         <div className={styles.buttonContainer}>
-          <Button name={"Done"} onClick={this.handleClick}></Button>
-          <Button name={"ToDo"} onClick={this.handleClick}></Button>
-          <Button name={"Full list"} onClick={this.handleClick}></Button>
+          <Button
+            id="testButton"
+            name={"Done"}
+            onClick={this.handleClick}
+          ></Button>
+          <Button
+            id="testButton2"
+            name={"ToDo"}
+            onClick={this.handleClick}
+          ></Button>
+          <Button
+            id="testButton3"
+            name={"Full list"}
+            onClick={this.handleClick}
+          ></Button>
         </div>
         <p>click on items to mark them as done</p>
         <ul>
@@ -117,6 +138,7 @@ class ToDoCore extends Component {
             <ListItem
               markAsDone={this.markAsDone}
               deleteItem={this.deleteItem}
+              updateItem={this.updateItem}
               text={item.text}
               key={item.docId}
               data={item}
